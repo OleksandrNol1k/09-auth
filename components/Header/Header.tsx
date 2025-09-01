@@ -1,6 +1,7 @@
 import css from './Header.module.css';
 import Link from 'next/link';
 import TagsMenu from '../TagsMenu/TagsMenu';
+import AuthNavigation from "../AuthNavigation/AuthNavigation";
 
 export default function Header() {
     return (
@@ -15,6 +16,7 @@ export default function Header() {
                     </li>
                     <li className={css.navigationItem}>
                         <TagsMenu />
+                        <AuthNavigation />
                     </li>
                 </ul>
             </nav>
