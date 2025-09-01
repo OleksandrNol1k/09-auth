@@ -46,11 +46,11 @@ export default function NotesClient({ initialData, tag }: NotesClientProps) {
         <div className={css.app}>
             <header className={css.toolbar}>
                 <SearchBox value={inputValue} onSearch={handleSearchChange} />
-                {totalPages > 1 && <Pagination total={totalPages} page={currentPage} onChange={setCurrentPage} />}
+                {totalPages > 1 && (<Pagination total={totalPages} page={currentPage} onChange={setCurrentPage} />)}
                 <Link href="/notes/action/create" className={css.button}>Create note +</Link>
             </header>
             {isLoading ? (<strong className={css.loading}>Loading notes, please wait...</strong>) :
                 (<NoteList notes={data?.data ?? []} />)}
         </div>
-    );
+    )
 }
